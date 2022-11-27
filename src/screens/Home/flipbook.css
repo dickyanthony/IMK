@@ -1,0 +1,152 @@
+.fullContainer {
+  border: 1px solid #f1f1f1;
+  margin-top: 80px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.flip-card {
+  background-color: transparent;
+  flex: 1;
+  height: 600px;
+  perspective: 1000px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.desc-container {
+  width: 400px;
+  height: 500px;
+  text-align: justify;
+  padding: 30px;
+}
+
+.text {
+  display: inline;
+  width: 100%;
+  font-size: 12px;
+}
+
+.read-or-hide {
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.babContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s linear;
+  margin-bottom: 200px;
+  border: 1px solid #f1f1f1;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.babContainer:hover {
+  cursor: pointer;
+  background-color: #fafafa;
+  opacity: 0.9;
+  transition: 0.3s linear;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.titleStyle {
+  font-size: 15px;
+  margin-left: 12px;
+  color: #3d3d3d;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: auto;
+  max-width: 370px;
+}
+
+.dateStyle {
+  width: 102px;
+  font-size: 13px;
+  color: #b1b1b1;
+  letter-spacing: 1px;
+}
+
+.tx {
+  width: 59px;
+  font-size: 15px;
+  color: #3d3d3d;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.new {
+  color: red;
+  font-size: 9px;
+  display: inline-block;
+  top: -5px;
+  position: relative;
+}
+
+.rate {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #000;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.buttonContainer {
+  justify-content: center;
+  text-align: center;
+  width: 180%;
+}
+
+.buttonStart {
+  width: 180%;
+}
+
+.titleStyles {
+  margin-bottom: -13px;
+  margin-top: 20px;
+}
+
+.primaryButtonContainer {
+  margin-left: 150px;
+}
