@@ -29,7 +29,7 @@ export default function Introduction() {
       </div>
 
       <div className="big_logo">
-        <img src={require("../../assets/logo-about.png")} />
+        <img alt="logo" src={require("../../assets/logo-about.png")} />
       </div>
     </div>
   );
