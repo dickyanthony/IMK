@@ -1,0 +1,29 @@
+.containerNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.imgNotFoundContainer {
+  width: 750px;
+  height: 750px;
+}
+
+.loading {
+  font-weight: bold;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l 1s steps(4) infinite;
+  color: rgb(71, 71, 71);
+}
+
+@keyframes l {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
