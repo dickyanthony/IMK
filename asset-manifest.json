@@ -1,26 +1,11 @@
 {
   "files": {
-    "main.css": "/IMK/static/css/main.192d5bbd.css",
-    "main.js": "/IMK/static/js/main.3ff0049e.js",
+    "main.css": "/IMK/static/css/main.310d60fa.css",
+    "main.js": "/IMK/static/js/main.6f0a8072.js",
     "static/js/787.438cacde.chunk.js": "/IMK/static/js/787.438cacde.chunk.js",
-    "static/media/coat.jpg": "/IMK/static/media/coat.b4bd199e75a2d04334ee.jpg",
     "static/media/logo-about.png": "/IMK/static/media/logo-about.198067f59fac934bea16.png",
-    "static/media/card-trend1.jpg": "/IMK/static/media/card-trend1.c7ae2bb0e855b3f21d99.jpg",
-    "static/media/card-trend2.jpg": "/IMK/static/media/card-trend2.fc4b48b9643718a7ce6b.jpg",
-    "static/media/card-trend3.jpg": "/IMK/static/media/card-trend3.d7c22e8516f2764bf655.jpg",
-    "static/media/product-img3.png": "/IMK/static/media/product-img3.858ac1bdfc154098098d.png",
-    "static/media/card-trend4.jpg": "/IMK/static/media/card-trend4.3f236c737e67714b37ec.jpg",
-    "static/media/product-img1.png": "/IMK/static/media/product-img1.b6c8e93a926ec0d0b4ae.png",
-    "static/media/product-img4.png": "/IMK/static/media/product-img4.90d7a22fed795d52aba6.png",
-    "static/media/street.jpg": "/IMK/static/media/street.14f463fab8498913e04e.jpg",
-    "static/media/casual.jpg": "/IMK/static/media/casual.7d34b239d98c3f8581c4.jpg",
-    "static/media/product-img6.jpg": "/IMK/static/media/product-img6.7da3d03195b061b0c5a5.jpg",
-    "static/media/product-img2.png": "/IMK/static/media/product-img2.074138936e89897e7c78.png",
+    "static/media/404Error.png": "/IMK/static/media/404Error.e1071a280dd3634a0086.png",
     "static/media/imkB.jpg": "/IMK/static/media/imkB.ab642185bc3e9d344c11.jpg",
-    "static/media/product-img4.jpg": "/IMK/static/media/product-img4.64d04c37b973fc04524a.jpg",
-    "static/media/product-img7.jpg": "/IMK/static/media/product-img7.16950044cf4c9d720d76.jpg",
-    "static/media/product-img5.jpg": "/IMK/static/media/product-img5.3c5886c0c360fa7980db.jpg",
-    "static/media/bohemian.jpg": "/IMK/static/media/bohemian.785c872ae320257f0571.jpg",
     "static/media/haermes3.jpg": "/IMK/static/media/haermes3.42c8ab79acaa8fb844ce.jpg",
     "static/media/haermes2.jpg": "/IMK/static/media/haermes2.a96accb70ff636e870b0.jpg",
     "static/media/bba2.jpg": "/IMK/static/media/bba2.d7b3eb4bf5da41ad1ff5.jpg",
@@ -40,12 +25,12 @@
     "static/media/imkF.jpg": "/IMK/static/media/imkF.75da78e0e6b79412686f.jpg",
     "static/media/insta.png": "/IMK/static/media/insta.94dd101c95afadfebccc.png",
     "index.html": "/IMK/index.html",
-    "main.192d5bbd.css.map": "/IMK/static/css/main.192d5bbd.css.map",
-    "main.3ff0049e.js.map": "/IMK/static/js/main.3ff0049e.js.map",
+    "main.310d60fa.css.map": "/IMK/static/css/main.310d60fa.css.map",
+    "main.6f0a8072.js.map": "/IMK/static/js/main.6f0a8072.js.map",
     "787.438cacde.chunk.js.map": "/IMK/static/js/787.438cacde.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.192d5bbd.css",
-    "static/js/main.3ff0049e.js"
+    "static/css/main.310d60fa.css",
+    "static/js/main.6f0a8072.js"
   ]
 }
