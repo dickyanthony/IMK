@@ -26,10 +26,8 @@ export function PressButton(props) {
     ...restProps
   } = props;
   return (
-    <div style={containerStyle} className={className}>
-      <div className="nav_btn" onClick={onClick} {...restProps}>
-        {title}
-      </div>
+    <div className={`nav_btn ${className}`} onClick={onClick} {...restProps}>
+      {title}
     </div>
   );
 }
