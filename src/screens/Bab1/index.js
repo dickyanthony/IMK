@@ -32,22 +32,40 @@ function BabFirst() {
   };
 
   const ReadOne = () => {
-    return <Bab1 />;
+    if (defaultOption === bab1Options[0]) {
+      return <Bab1 readFull={readFull} />;
+    } else if (defaultOption === bab1Options[1]) {
+      return <Bab11 readFull={readFull} />;
+    } else if (defaultOption === bab1Options[2]) {
+      return <Bab12 readFull={readFull} />;
+    } else if (defaultOption === bab1Options[3]) {
+      return <Bab13 readFull={readFull} />;
+    } else if (defaultOption === bab1Options[4]) {
+      return <Bab14 readFull={readFull} />;
+    }
   };
   return (
     <div className="container">
-      {!readFull && (
-        <Dropdown
-          options={bab1Options}
-          onChange={(val) => setDefaultOption(val)}
-          value={defaultOption}
-          placeholder="Select an option"
+      <div
+        className="headerContainer"
+        style={{ justifyContent: readFull ? "flex-end" : "space-between" }}
+      >
+        {!readFull && (
+          <Dropdown
+            options={bab1Options}
+            onChange={(val) => setDefaultOption(val.value)}
+            value={defaultOption}
+            placeholder="Select an option"
+            className="dropdownContainer"
+          />
+        )}
+        <PressButton
+          className="btnContainer"
+          containerStyle={{ border: "1px solid blue" }}
+          title={readFull ? "read less" : "read full"}
+          onClick={() => setReadFull(!readFull)}
         />
-      )}
-      <PressButton
-        title={readFull ? "read less" : "read full"}
-        onClick={() => setReadFull(!readFull)}
-      />
+      </div>
 
       <div className="contentContainer">
         {readFull ? <ReadAll /> : <ReadOne />}

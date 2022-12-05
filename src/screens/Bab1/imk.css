@@ -4,6 +4,42 @@
   margin: 0;
 }
 
+.headerContainer {
+  width: 80%;
+  display: flex;
+  margin-top: 20px;
+}
+
 .contentContainer {
-  width: 70%;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: 1px solid red;
+}
+
+.btnContainer {
+  padding: 10px 22px;
+  margin-top: 0px;
+  margin-right: 0px;
+  width: 120px;
+  height: 42px;
+}
+
+.dropdownContainer {
+  width: 45%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgSize {
+  width: 40%;
+  height: 50%;
+}
+
+.paragraph {
+  font-size: 14px;
+  text-align: justify;
 }
