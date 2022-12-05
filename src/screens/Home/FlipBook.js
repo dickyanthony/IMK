@@ -50,7 +50,7 @@ export default function FlipBook() {
         }}
       >
         <ButtonLink
-          to={"Screens/IMk"}
+          to={"Bab1"}
           className="buttonContainer"
           classLink="buttonStart"
           title="BACA"
