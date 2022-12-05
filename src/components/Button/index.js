@@ -17,6 +17,22 @@ export function PrimaryButton(props) {
     </div>
   );
 }
+export function PressButton(props) {
+  const {
+    onClick,
+    title = "Primary Button",
+    className,
+    containerStyle,
+    ...restProps
+  } = props;
+  return (
+    <div style={containerStyle} className={className}>
+      <div className="nav_btn" onClick={onClick} {...restProps}>
+        {title}
+      </div>
+    </div>
+  );
+}
 export function ButtonLink(props) {
   const {
     to = "#",
