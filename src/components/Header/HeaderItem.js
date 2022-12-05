@@ -2,7 +2,7 @@ export const headerItems = [
   {
     id: 2,
     title: "IMK",
-    path: "screens/IMK",
+    path: "/Bab1",
     cName: "nav-item",
   },
 ];

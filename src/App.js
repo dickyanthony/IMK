@@ -4,9 +4,9 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./screens/Home";
-import IMK from "./screens/IMK";
 import About from "./screens/About";
 import NotFound from "./screens/NotFound/Index";
+import BabFirst from "./screens/Bab1";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/screens/IMK" element={<IMK />} />
-        <Route path="/screens/About" element={<About />} />
+        <Route path="/Bab1" element={<BabFirst />} />
+        <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

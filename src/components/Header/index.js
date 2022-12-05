@@ -55,7 +55,7 @@ function Header() {
           </div>
 
           <div>
-            <Link to="/screens/About" className="navprod_text">
+            <Link to="/About" className="navprod_text">
               About
             </Link>
           </div>

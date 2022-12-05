@@ -10,7 +10,7 @@ export default function FlipBook() {
   const [isReadMore, setIsReadMore] = useState(true);
   const navigate = useNavigate();
   function _toIMK() {
-    navigate("screens/IMK");
+    navigate("Bab1");
   }
 
   const RenderTitle = () => {
