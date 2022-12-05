@@ -14,7 +14,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Bab1" element={<BabFirst />} />
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
