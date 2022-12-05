@@ -26,12 +26,6 @@ function Header() {
             </Link>
           </div>
         </div>
-
-        <div>
-          <Link to="#" className="nav_btn">
-            Log In
-          </Link>
-        </div>
       </div>
     </>
   );
