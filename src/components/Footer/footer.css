@@ -68,7 +68,7 @@
     background-color: black;
   }
 }
-@media only screen and (min-width: 322px) {
+@media only screen and (min-width: 322px) and (max-width: 340) {
   .footer {
     display: flex;
     flex-direction: row;
