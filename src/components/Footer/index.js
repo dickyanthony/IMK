@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -10,6 +9,7 @@ function Footer() {
           <img
             className="logo_footer"
             src={require("../../assets/logo-footer.png")}
+            alt={"footer"}
           />
         </div>
 
@@ -20,6 +20,7 @@ function Footer() {
             }
             className="icon_footer"
             src={require("../../assets/insta.png")}
+            alt={"insta"}
           />
         </div>
       </div>
