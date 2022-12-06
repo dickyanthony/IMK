@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo-header.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { headerItems } from "./HeaderItem";
 import Dropdown from "../Dropdown";
 import "./header.css";
@@ -11,19 +11,32 @@ function Header() {
   return (
     <>
       <div className="navbar_products">
-        <img className="navprod_logo" src={logo} />
+        <img className="navprod_logo" src={logo} alt={logo} />
 
         <div className="navprod_link">
           <div>
-            <Link to={"/"} className="navprod_text">
+            <NavLink
+              to={"/"}
+              // className={({ isActive }) =>
+              //   isActive ? "asdsd" : "navprod_text"
+              // }
+              className={({ isActive }) =>
+                isActive ? "navprod_text_active" : "navprod_text"
+              }
+            >
               Home
-            </Link>
+            </NavLink>
           </div>
 
           <div>
-            <Link to="/About" className="navprod_text">
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                isActive ? "navprod_text_active" : "navprod_text"
+              }
+            >
               About
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -32,6 +32,17 @@
   position: relative;
   transition: all 0.2s linear;
 }
+.navprod_text_active {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--black);
+  position: relative;
+  transition: all 0.2s linear;
+  border-bottom: 2px solid black;
+}
 .navbar {
   height: 10vh;
   background: #1b1919;
