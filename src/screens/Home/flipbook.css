@@ -150,3 +150,242 @@
 .primaryButtonContainer {
   margin-left: 150px;
 }
+
+@media only screen and (max-width: 1024px) {
+  /* .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 120%;
+    height: 90px;
+    margin-top: auto;
+    background-color: black;
+  }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    margin-top: 27px;
+    justify-content: space-between;
+  } */
+}
+
+@media only screen and (max-width: 814px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+  }
+  .desc-container {
+    flex: 1;
+    height: 500px;
+    text-align: justify;
+    padding: 30px;
+  }
+  /* .primaryButtonContainer {
+    width: 20px;
+  }
+  .nav-btn {
+    width: 20px;
+  } */
+  .buttonStart {
+    width: 130%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+  }
+  .desc-container {
+    flex: 1;
+    height: 500px;
+    text-align: justify;
+    padding: 30px;
+  }
+
+  .buttonStart {
+    width: 140%;
+  }
+}
+@media only screen and (max-width: 662px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+  }
+  .desc-container {
+    flex: 1;
+    height: 500px;
+    text-align: justify;
+    padding: 30px;
+  }
+  .primaryButtonContainer {
+    width: 20px;
+  }
+  /* .nav-btn {
+    width: 20px;
+    margin-right: 0;
+  } */
+  .buttonStart {
+    width: 160%;
+  }
+}
+
+@media only screen and (max-width: 581px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 364px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .fullContainer {
+    border: 1px solid #f1f1f1;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    flex: 1;
+    height: 600px;
+    perspective: 1000px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

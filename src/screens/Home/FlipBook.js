@@ -99,37 +99,35 @@ export default function FlipBook() {
     );
   };
   return (
-    <div>
-      <div className="fullContainer">
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front">
-              <img
-                src={require("../../assets/imkF.jpg")}
-                alt="Avatar"
-                style={{ width: "300px", height: "400px" }}
-              />
-            </div>
-            <div className="flip-card-back">
-              <img
-                src={require("../../assets/imkB.jpg")}
-                alt="Avatar"
-                style={{ width: "300px", height: "400px" }}
-              />
-            </div>
+    <div className="fullContainer">
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <img
+              src={require("../../assets/imkF.jpg")}
+              alt="Avatar"
+              style={{ width: "300px", height: "400px" }}
+            />
           </div>
-          <div className="desc-container">
-            <RenderTitle />
-            <FAEyeStar />
-            <ButtonCombo />
-            <ReadMore
-              desc="Buku ini membahas aspek-aspek penting yang dipelajari dalam Interaksi Manusia dan Komputer antara lain adalah aspek manusia, aspek komputer, dan aspek lingkungan kerja atau yang lebih dikenal dengan sebutan ergonomik. Dalam buku ini Anda diajak untuk memahami ketiga aspek di atas terutama dalam kaitannya dengan pembuatan antarmuka program aplikasi dan pencapaian kondisi lingkungan kerja yang nyaman.
-          Berbeda dengan edisi sebelumnya yang membagi keseluruhan isi buku menjadi dua bagian besar, yaitu diskusi tentang ketiga aspek di atas dan teknik pemrograman untuk membuat tampilan antarmuka program aplikasi. Buku ini hanya mengupas tiga aspek di atas, tetapi dengan kupasan yang lebih mendalam."
+          <div className="flip-card-back">
+            <img
+              src={require("../../assets/imkB.jpg")}
+              alt="Avatar"
+              style={{ width: "300px", height: "400px" }}
             />
           </div>
         </div>
-        <BabComp />
+        <div className="desc-container">
+          <RenderTitle />
+          <FAEyeStar />
+          <ButtonCombo />
+          <ReadMore
+            desc="Buku ini membahas aspek-aspek penting yang dipelajari dalam Interaksi Manusia dan Komputer antara lain adalah aspek manusia, aspek komputer, dan aspek lingkungan kerja atau yang lebih dikenal dengan sebutan ergonomik. Dalam buku ini Anda diajak untuk memahami ketiga aspek di atas terutama dalam kaitannya dengan pembuatan antarmuka program aplikasi dan pencapaian kondisi lingkungan kerja yang nyaman.
+          Berbeda dengan edisi sebelumnya yang membagi keseluruhan isi buku menjadi dua bagian besar, yaitu diskusi tentang ketiga aspek di atas dan teknik pemrograman untuk membuat tampilan antarmuka program aplikasi. Buku ini hanya mengupas tiga aspek di atas, tetapi dengan kupasan yang lebih mendalam."
+          />
+        </div>
       </div>
+      <BabComp />
     </div>
   );
 }

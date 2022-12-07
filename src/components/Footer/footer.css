@@ -33,6 +33,25 @@
   height: 36.07px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 120%;
+    height: 90px;
+    margin-top: auto;
+    background-color: black;
+  }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    margin-top: 27px;
+    justify-content: space-between;
+  }
+}
+
 @media only screen and (max-width: 814px) {
   .footer {
     display: flex;
@@ -42,6 +61,13 @@
     height: 90px;
     margin-top: auto;
     background-color: black;
+  }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 70px;
+    margin-top: 27px;
+    justify-content: space-between;
   }
 }
 
@@ -55,6 +81,13 @@
     margin-top: auto;
     background-color: black;
   }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 65px;
+    margin-top: 27px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 430px) {
@@ -67,16 +100,48 @@
     margin-top: auto;
     background-color: black;
   }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    margin-top: 27px;
+    justify-content: space-between;
+  }
 }
-@media only screen and (min-width: 322px) and (max-width: 340) {
+@media only screen and (max-width: 364px) {
   .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 171%;
+    width: 165%;
     height: 90px;
     margin-top: auto;
     background-color: black;
+  }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    margin-top: 27px;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 173%;
+    height: 90px;
+    margin-top: auto;
+    background-color: black;
+  }
+  .footer_icon_container {
+    display: flex;
+    flex-direction: row;
+    width: 35px;
+    margin-top: 27px;
+    justify-content: space-between;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -92,9 +157,8 @@
   .footer_icon_container {
     display: flex;
     flex-direction: row;
-    width: 80px;
+    width: 30px;
     margin-top: 27px;
-    margin-left: 40px;
     justify-content: space-between;
   }
 }

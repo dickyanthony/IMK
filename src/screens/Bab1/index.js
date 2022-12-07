@@ -45,7 +45,7 @@ function BabFirst() {
     }
   };
   return (
-    <div className="container">
+    <div className="containerBab">
       <div
         className="headerContainer"
         style={{ justifyContent: readFull ? "flex-end" : "space-between" }}
