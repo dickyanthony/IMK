@@ -34,23 +34,18 @@ export default function SearchBar() {
   };
   useEffect(() => {
     setNewLink("");
-    tes.current.clear();
-    tes.current?.query("");
-    setHasFocus(false);
   });
 
   useEffect(() => {
     if (newLink) {
       navigate(newLink);
-      tes.current.clear();
-      tes.current?.query("");
-      tes.current?.focus(false);
-      tes.current.select();
     }
   }, [newLink]);
   function _onNavigate(link) {
     if (link) {
       setNewLink(link.onClick);
+      tes.current.clear();
+      tes.current?.blur();
     }
   }
 
@@ -81,7 +76,6 @@ export default function SearchBar() {
           src={item.img}
           alt={item.name}
           className="mr-5"
-          // onClick={() => console.log("click==>", item.onClick)}
         />
         <p>{item.name}</p>
       </div>
@@ -110,7 +104,6 @@ export default function SearchBar() {
         Item={Item}
         onSelect={(item) => _onNavigate(item)}
       />
-      {/* <button onClick={handleQuery}>Perform Query</button> */}
     </div>
   );
 }
