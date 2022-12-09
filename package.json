@@ -8,6 +8,9 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.5",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -25,6 +28,8 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-typed": "^1.2.0",
+    "split-match": "^0.2.2",
+    "turnstone": "^2.2.0",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
@@ -54,7 +59,10 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "file-loader": "^6.2.0",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
     "url-loader": "^4.1.1"
   }
 }
