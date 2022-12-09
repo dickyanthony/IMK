@@ -1,0 +1,39 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  margin-top: 5px;
+}
+.inputcontainer {
+  height: 500px;
+  border-radius: 20px;
+}
+.dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+input {
+  width: 220px;
+}
+
+.search-inner {
+  display: flex;
+}
+
+.iconStyle {
+  margin-left: -25px;
+  border-width: 1px solid red;
+}
