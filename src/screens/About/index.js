@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 function About() {
   return (
-    <div className="containerAbout">
+    <div className="containerAbout w-full">
       <Introduction />
       <PersonalProject />
       <Contact />
