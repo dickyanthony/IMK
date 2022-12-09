@@ -1,18 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./flipbook.css";
 import { ButtonLink, PrimaryButton } from "../../components/Button";
+import { book, getWindowDimensions } from "../../constant";
+import ItemBook from "../../components/ItemBook";
 
 export default function FlipBook() {
   const [isReadMore, setIsReadMore] = useState(true);
-  const navigate = useNavigate();
-  function _toIMK() {
-    navigate("Bab1");
-  }
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
+  const mBottom =
+    windowDimensions.width < 841 && windowDimensions.width >= 659
+      ? "80px"
+      : windowDimensions.width < 659 && windowDimensions.width >= 643
+      ? "120px"
+      : windowDimensions.width < 643 && windowDimensions.width >= 606
+      ? "150px"
+      : "50px";
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const RenderTitle = () => {
     return <h3 className="titleStyles">Interaksi Manusia dan Komputer</h3>;
   };
@@ -75,32 +93,16 @@ export default function FlipBook() {
     );
   };
   const BabComp = () => {
-    return (
-      <div
-        className="babContainer"
-        onClick={() => _toIMK()}
-        style={!isReadMore ? { marginTop: "50px" } : {}}
-      >
-        <div className="row">
-          <img
-            src={require("../../assets/imkF.jpg")}
-            style={{ width: "70px", height: "70px" }}
-          />
-
-          <div className="titleStyle">
-            1. Pendahuluan <span className="new">new</span>
-          </div>
-        </div>
-        <div className="row">
-          <div className="dateStyle">2022 Nov 27</div>
-          <div className="tx">#1</div>
-        </div>
-      </div>
-    );
+    return book.map((item) => {
+      return <ItemBook item={item} />;
+    });
   };
   return (
-    <div className="fullContainer">
-      <div className="flip-card">
+    <div className={`fullContainer `} style={{ marginBottom: "50px" }}>
+      <div
+        className={"flip-card"}
+        style={{ marginBottom: !isReadMore ? mBottom : "" }}
+      >
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <img

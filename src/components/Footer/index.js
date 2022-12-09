@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
   return (
     <>
-      <div className="footer">
+      <div className="footer flex w-full justify-center">
         <div>
           <img
             className="logo_footer"

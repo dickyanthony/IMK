@@ -29,6 +29,8 @@
   flex-direction: row;
   gap: 73px;
   width: 54%;
+  flex-direction: row;
+  justify-content: center;
   /* margin: auto 0 auto 20px; */
 }
 
@@ -124,7 +126,6 @@
 
 @media only screen and (max-width: 1024px) {
   .navbar_products {
-    width: 120%;
     height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
@@ -132,11 +133,24 @@
     align-items: center;
     justify-content: center;
   }
+  .navprod_logo {
+    width: 109.85px;
+    height: 38.42px;
+    /* margin-top: 20.58px; */
+    margin-left: 25.15px;
+  }
+  .navprod_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 73px;
+    width: 54%;
+    /* margin: auto 0 auto 20px; */
+  }
 }
 
 @media only screen and (max-width: 814px) {
   .navbar_products {
-    width: 120%;
     height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
@@ -148,7 +162,6 @@
 
 @media only screen and (max-width: 581px) {
   .navbar_products {
-    width: 140%;
     height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
@@ -160,7 +173,6 @@
 
 @media only screen and (max-width: 430px) {
   .navbar_products {
-    width: 160%;
     height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
@@ -188,7 +200,6 @@
 }
 @media only screen and (max-width: 340px) {
   .navbar_products {
-    width: 173%;
     height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
@@ -212,15 +223,6 @@
   }
 }
 @media only screen and (max-width: 320px) {
-  .navbar_products {
-    width: 180%;
-    height: 80px;
-    display: flex;
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
-    z-index: 10;
-    align-items: center;
-    justify-content: center;
-  }
   .secondary_container {
     display: flex;
     flex-direction: row;
@@ -238,13 +240,12 @@
 }
 @media only screen and (max-width: 318px) {
   .navbar_products {
-    width: 180%;
-    height: 80px;
+    /* height: 80px;
     display: flex;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
     z-index: 10;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
   .secondary_container {
     display: flex;

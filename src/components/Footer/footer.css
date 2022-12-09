@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 120%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 120%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 140%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -95,7 +95,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 160%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -113,7 +113,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 165%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -131,7 +131,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 173%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;
@@ -149,7 +149,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 180%;
+
     height: 90px;
     margin-top: auto;
     background-color: black;

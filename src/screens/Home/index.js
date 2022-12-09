@@ -4,7 +4,7 @@ import FlipBook from "./FlipBook";
 
 function Home() {
   return (
-    <div className="container">
+    <div className="flex w-full justify-center content-center">
       <FlipBook />
     </div>
   );
