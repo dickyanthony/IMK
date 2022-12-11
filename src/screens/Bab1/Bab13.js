@@ -7,7 +7,7 @@ export default function Bab13(props) {
     <div>
       <h1>1.3 PERANTI BANTU PENGEMBANG SISTEM</h1>
       <div className="row">
-        <p className="paragraph">
+        <p className="paragraph font-sans">
           Salah satu kriteria yang harus dimiliki oleh sebuah perangkat lunak
           untuk mendapatkan predikat "ramah dengan pengguna" adalah bahwa
           perangkat lunak tersebut mempunyai antarmuka yang bagus, mudah

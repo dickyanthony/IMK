@@ -7,7 +7,7 @@ export default function Bab11(props) {
     <div>
       <h2>1.1 ANTAR MUKA MANUSIA DAN KOMPUTER</h2>
       <div className="row">
-        <p className="paragraph">
+        <p className="paragraph font-sans">
           Prinsip dasar sebuah system komputer adalah masukan, proses, keluaran
           (input, process, output). Kepada komputer, pengguna memberikan data
           masukan, yang biasanya berupa angka maupun deretan karakter. Data

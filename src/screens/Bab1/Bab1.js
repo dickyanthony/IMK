@@ -7,7 +7,7 @@ export default function Bab1(props) {
     <div>
       <h2>BAB I PENDAHULUAN</h2>
       <div className="row">
-        <p className="paragraph">
+        <p className="paragraph font-sans">
           Istilah ramah dengan pengguna (user /friendy) dan WYSIWYG ( what you
           see is what you get) sering digunakan ketika seseorang menawarkan
           sebuah perangkat lunak atau program aplikasi. Anda yang baru pertama

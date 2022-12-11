@@ -7,7 +7,7 @@ export default function Bab12(props) {
     <div>
       <h1>1.2 INTERAKSI MANUSIA DAN KOMPUTER</h1>
       <div className="row">
-        <p className="paragraph">
+        <p className="paragraph font-sans">
           Interaksi Manusia-Komputer (untuk seterusnya disingkat dengan IMK)
           adalah sebuah disiplin ilmu yang mempelajari perancangan,
           implementasi, dan evaluasi sistem komputasi interaktif dan berbagai

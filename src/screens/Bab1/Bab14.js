@@ -7,7 +7,7 @@ export default function Bab14(props) {
     <div>
       <h1>1.4 STRATEGI PENGEMBANGAN ANTARMUKA</h1>
       <div className="row">
-        <p className="paragraph">
+        <p className="paragraph font-sans">
           Dari beberapa hal yang dijelaskan di atas tersirat bahwa sebuah
           program aplikasi terdiri atas dua bagian penting. Bagian pertama
           adalah bagian antarmuka yang berfungsi sebagai sarana dialog antara
