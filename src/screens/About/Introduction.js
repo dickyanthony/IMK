@@ -48,6 +48,8 @@ export default function Introduction() {
             malesuada ac nibh aliquam tristi
           </p>
           <PrimaryButton
+            className="w-9/12"
+            width="auto"
             to="https://www.instagram.com/dickyanth/"
             target="_blank"
             title="Know Me More"
@@ -96,6 +98,7 @@ export default function Introduction() {
             malesuada ac nibh aliquam tristi
           </p>
           <PrimaryButton
+            width="auto"
             to="https://www.instagram.com/dickyanth/"
             target="_blank"
             title="Know Me More"
@@ -119,7 +122,7 @@ export default function Introduction() {
         } justify-center mt-5 mb-5 ml-21 mr-21 box-border content-center`}
       >
         <div className="flex flex-col w-400 content-center justify-center">
-          <div style={{ color: "white" }}>Hello WorldM</div>
+          <div style={{ color: "white" }}>Hello World</div>
           <div className="text-sm text-white font-bold">
             Hi, I'm Dicky Anthony
           </div>
@@ -144,6 +147,7 @@ export default function Introduction() {
             malesuada ac nibh aliquam tristi
           </p>
           <PrimaryButton
+            width="auto"
             to="https://www.instagram.com/dickyanth/"
             target="_blank"
             title="Know Me More"
@@ -171,14 +175,17 @@ export default function Introduction() {
             Hi, I'm Dicky Anthony
           </div>
           <div>
-            <div className="flex">
+            <div className={`${windowDimensions.width > 337 ? "flex" : ""}`}>
               <div className="text-xs mb-2 text-white">
                 {"I'm Currently Working as "}
               </div>
               <ReactTyped
                 className="text-xs"
                 style={{
-                  marginLeft: "4px",
+                  display:
+                    windowDimensions.width > 337 ? "inline-block" : "block",
+                  marginTop: windowDimensions.width > 337 ? "" : "-10px",
+                  marginLeft: windowDimensions.width > 337 ? "4px" : "",
                 }}
                 strings={[" Android Developer", " IOS Developer"]}
                 typeSpeed={100}
@@ -193,6 +200,7 @@ export default function Introduction() {
             malesuada ac nibh aliquam tristi
           </p>
           <PrimaryButton
+            width="auto"
             to="https://www.instagram.com/dickyanth/"
             target="_blank"
             title="Know Me More"

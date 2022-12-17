@@ -32,20 +32,18 @@ export default function SearchBar() {
       "cursor-pointer p-1.5 text-lg whitespace-nowrap sm:text-ellipsis overflow-hidden text-oldsilver-700 rounded-md bg-gradient-to-t from-crystal-100 to-white",
     noItems: "cursor-default text-center my-20",
   };
-  useEffect(() => {
-    setNewLink("");
-  });
 
-  useEffect(() => {
-    if (newLink) {
-      navigate(newLink);
-    }
-  }, [newLink]);
+  // useEffect(() => {
+  //   if (newLink) {
+  //     navigate(newLink);
+  //   }
+  // }, [newLink]);
   function _onNavigate(link) {
     if (link) {
-      setNewLink(link.onClick);
+      navigate(link.onClick);
       tes.current.clear();
       tes.current?.blur();
+      console.log("tes==>", tes);
     }
   }
 
@@ -96,9 +94,9 @@ export default function SearchBar() {
         listbox={listbox}
         onBlur={onBlur}
         onFocus={onFocus}
-        autoFocus={true}
+        // autoFocus={true}
         matchText={false}
-        placeholder="Cari materi"
+        placeholder={`Cari materi "pendahuluan"`}
         noItemsMessage="Tidak ada materi"
         styles={styles}
         Item={Item}

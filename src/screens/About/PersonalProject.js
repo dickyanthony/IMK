@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { getWindowDimensions } from "../../constant";
 import "./about.css";
 
 export default function PersonalProject() {
@@ -27,149 +29,513 @@ export default function PersonalProject() {
     { img: require("../../assets/bba4.jpg"), alt: "bba4" },
     { img: require("../../assets/bba5.jpg"), alt: "bba5" },
   ];
-  return (
-    <div>
-      <h2
-        className="aboutus_text"
-        style={{ textAlign: "center", marginBottom: "30px" }}
-      >
-        Few part of ongoing personal team projects
-      </h2>
-      <div className="wrapCarousel">
-        <div
-          className="imgContainer"
-          style={{ marginRight: "50px" }}
-          onMouseEnter={() => setHaermes3(true)}
-          onMouseLeave={() => setHaermes3(false)}
-        >
-          <div>H***** 3</div>
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const RenderBigPro = () => {
+    return (
+      <>
+        <h2
+          className="aboutus_text"
+          style={{ textAlign: "center", marginBottom: "30px" }}
+        >
+          Few part of ongoing personal team projects
+        </h2>
+        <div className="wrapCarousel">
           <div
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
             onMouseEnter={() => setHaermes3(true)}
             onMouseLeave={() => setHaermes3(false)}
-            className="projectBlock"
           >
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Mobile Application for Haermes Employee Self Service
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Haermes Mobile ESS is a mobile application that can help HR
-            workflows and processes
-          </div>
-          <Carousel
-            autoPlay={!haermes3}
-            interval="4000"
-            transitionTime="2000"
-            showArrows={false}
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-          >
-            {haermes.map((item) => {
-              return (
-                <img
-                  style={{
-                    width: "200px",
-                    height: "340px",
-                    borderRadius: "20px",
-                  }}
-                  src={item.img}
-                  alt={item.alt}
-                />
-              );
-            })}
-          </Carousel>
-        </div>
+            <div>H***** 3</div>
 
-        <div
-          className="imgContainer"
-          style={{ marginRight: "50px" }}
-          onMouseEnter={() => setSwiftClaims(true)}
-        >
-          <div>S********m</div>
+            <div
+              onMouseEnter={() => setHaermes3(true)}
+              onMouseLeave={() => setHaermes3(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for Haermes Employee Self Service
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Haermes Mobile ESS is a mobile application that can help HR
+              workflows and processes
+            </div>
+            <Carousel
+              autoPlay={!haermes3}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {haermes.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+
           <div
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
             onMouseEnter={() => setSwiftClaims(true)}
-            onMouseLeave={() => setSwiftClaims(false)}
-            className="projectBlock"
           >
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Expense Claims Made Easy. S********m is a cloud-based online expense
-            management application.
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Eliminate the hassle of collecting and tracking cumbersome paper
-            expense receipts and reports
+            <div>S********m</div>
+            <div
+              onMouseEnter={() => setSwiftClaims(true)}
+              onMouseLeave={() => setSwiftClaims(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Expense Claims Made Easy. S********m is a cloud-based online
+              expense management application.
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Eliminate the hassle of collecting and tracking cumbersome paper
+              expense receipts and reports
+            </div>
+            <Carousel
+              autoPlay={!swiftClaims}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {swiftClaim.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
           </div>
-          <Carousel
-            autoPlay={!swiftClaims}
-            interval="4000"
-            transitionTime="2000"
-            showArrows={false}
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-          >
-            {swiftClaim.map((item) => {
-              return (
-                <img
-                  style={{
-                    width: "200px",
-                    height: "340px",
-                    borderRadius: "20px",
-                  }}
-                  className="imgContent"
-                  src={item.img}
-                  alt={item.alt}
-                />
-              );
-            })}
-          </Carousel>
+          <div className="imgContainer" onMouseEnter={() => setBBA(true)}>
+            <div>B** C</div>
+            <div
+              onMouseEnter={() => setBBA(true)}
+              onMouseLeave={() => setBBA(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for B** B*****ts Helpdesk Ticketing System
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Provides great support for B** User on the go. Simplify user
+              inquiries and issues all done from your mobile
+            </div>
+            <Carousel
+              autoPlay={!BBA}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {bbaC.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
-        <div className="imgContainer" onMouseEnter={() => setBBA(true)}>
-          <div>B** C</div>
+      </>
+    );
+  };
+
+  const RenderMedPro = () => {
+    return (
+      <>
+        <h2
+          className="aboutus_text"
+          style={{ textAlign: "center", marginBottom: "30px" }}
+        >
+          Few part of ongoing personal team projects
+        </h2>
+        <div className="wrapCarousel">
           <div
-            onMouseEnter={() => setBBA(true)}
-            onMouseLeave={() => setBBA(false)}
-            className="projectBlock"
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
+            onMouseEnter={() => setHaermes3(true)}
+            onMouseLeave={() => setHaermes3(false)}
           >
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Mobile Application for B** B*****ts Helpdesk Ticketing System
-            <div style={{ whiteSpace: "break-spaces" }}> </div>
-            Provides great support for B** User on the go. Simplify user
-            inquiries and issues all done from your mobile
+            <div>H***** 3</div>
+
+            <div
+              onMouseEnter={() => setHaermes3(true)}
+              onMouseLeave={() => setHaermes3(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for Haermes Employee Self Service
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Haermes Mobile ESS is a mobile application that can help HR
+              workflows and processes
+            </div>
+            <Carousel
+              autoPlay={!haermes3}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {haermes.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
           </div>
-          <Carousel
-            autoPlay={!BBA}
-            interval="4000"
-            transitionTime="2000"
-            showArrows={false}
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
+
+          <div
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
+            onMouseEnter={() => setSwiftClaims(true)}
           >
-            {bbaC.map((item) => {
-              return (
-                <img
-                  style={{
-                    width: "200px",
-                    height: "340px",
-                    borderRadius: "20px",
-                  }}
-                  src={item.img}
-                  alt={item.alt}
-                />
-              );
-            })}
-          </Carousel>
+            <div>S********m</div>
+            <div
+              onMouseEnter={() => setSwiftClaims(true)}
+              onMouseLeave={() => setSwiftClaims(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Expense Claims Made Easy. S********m is a cloud-based online
+              expense management application.
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Eliminate the hassle of collecting and tracking cumbersome paper
+              expense receipts and reports
+            </div>
+            <Carousel
+              autoPlay={!swiftClaims}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {swiftClaim.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className="imgContainer" onMouseEnter={() => setBBA(true)}>
+            <div>B** C</div>
+            <div
+              onMouseEnter={() => setBBA(true)}
+              onMouseLeave={() => setBBA(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for B** B*****ts Helpdesk Ticketing System
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Provides great support for B** User on the go. Simplify user
+              inquiries and issues all done from your mobile
+            </div>
+            <Carousel
+              autoPlay={!BBA}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+            >
+              {bbaC.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
-      </div>
+      </>
+    );
+  };
+
+  const RenderSmallPro = () => {
+    return (
+      <>
+        <h2
+          className="aboutus_text"
+          style={{ textAlign: "center", marginBottom: "30px" }}
+        >
+          Few part of ongoing personal team projects
+        </h2>
+        <div className="wrapCarousel">
+          <div
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
+            onMouseEnter={() => setHaermes3(true)}
+            onMouseLeave={() => setHaermes3(false)}
+          >
+            <div>H***** 3</div>
+
+            <div
+              onMouseEnter={() => setHaermes3(true)}
+              onMouseLeave={() => setHaermes3(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for Haermes Employee Self Service
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Haermes Mobile ESS is a mobile application that can help HR
+              workflows and processes
+            </div>
+            <Carousel
+              autoPlay={!haermes3}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {haermes.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+
+          <div
+            className="imgContainer"
+            style={{ marginRight: "50px" }}
+            onMouseEnter={() => setSwiftClaims(true)}
+          >
+            <div>S********m</div>
+            <div
+              onMouseEnter={() => setSwiftClaims(true)}
+              onMouseLeave={() => setSwiftClaims(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Expense Claims Made Easy. S********m is a cloud-based online
+              expense management application.
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Eliminate the hassle of collecting and tracking paper
+            </div>
+            <Carousel
+              autoPlay={!swiftClaims}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {swiftClaim.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className="imgContainer" onMouseEnter={() => setBBA(true)}>
+            <div>B** C</div>
+            <div
+              onMouseEnter={() => setBBA(true)}
+              onMouseLeave={() => setBBA(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for B** B*****ts Helpdesk Ticketing System
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Provides great support for B** User on the go. Simplify user
+              inquiries and issues all done from your mobile
+            </div>
+            <Carousel
+              autoPlay={!BBA}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {bbaC.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  const RenderSSPro = () => {
+    return (
+      <>
+        <h2
+          className="aboutus_text"
+          style={{ textAlign: "center", marginBottom: "30px" }}
+        >
+          Few part of ongoing personal team projects
+        </h2>
+        <div className="wrapCarousel">
+          <div
+            className="imgContainer"
+            onMouseEnter={() => setHaermes3(true)}
+            onMouseLeave={() => setHaermes3(false)}
+          >
+            <div>H***** 3</div>
+
+            <div
+              onMouseEnter={() => setHaermes3(true)}
+              onMouseLeave={() => setHaermes3(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for Haermes Employee Self Service
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Haermes Mobile ESS is a mobile application that can help HR
+              workflows and processes
+            </div>
+            <Carousel
+              autoPlay={!haermes3}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {haermes.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+
+          <div
+            className="imgContainer"
+            onMouseEnter={() => setSwiftClaims(true)}
+          >
+            <div>S********m</div>
+            <div
+              onMouseEnter={() => setSwiftClaims(true)}
+              onMouseLeave={() => setSwiftClaims(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Expense Claims Made Easy. S********m is a cloud-based online
+              expense management application.
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Eliminate the hassle of collecting and tracking paper
+            </div>
+            <Carousel
+              autoPlay={!swiftClaims}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {swiftClaim.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className="imgContainer" onMouseEnter={() => setBBA(true)}>
+            <div>B** C</div>
+            <div
+              onMouseEnter={() => setBBA(true)}
+              onMouseLeave={() => setBBA(false)}
+              className="projectBlock"
+            >
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Mobile Application for B** B*****ts Helpdesk Ticketing System
+              <div style={{ whiteSpace: "break-spaces" }}> </div>
+              Provides great support for B** User on the go. Simplify user
+              inquiries and issues all done from your mobile
+            </div>
+            <Carousel
+              autoPlay={!BBA}
+              interval="4000"
+              transitionTime="2000"
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              infiniteLoop
+            >
+              {bbaC.map((item) => {
+                return (
+                  <img className="imgSizeAbout" src={item.img} alt={item.alt} />
+                );
+              })}
+            </Carousel>
+          </div>
+        </div>
+      </>
+    );
+  };
+  return (
+    <div>
+      {windowDimensions.width > 853 ? (
+        <RenderBigPro />
+      ) : windowDimensions.width > 775 ? (
+        <RenderMedPro />
+      ) : windowDimensions.width > 462 ? (
+        <RenderSmallPro />
+      ) : (
+        <RenderSSPro />
+      )}
     </div>
   );
 }

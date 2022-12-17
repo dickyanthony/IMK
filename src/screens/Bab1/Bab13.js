@@ -2,10 +2,11 @@ import React from "react";
 import "./imk.css";
 
 export default function Bab13(props) {
-  const { readFull } = props;
+  const { style } = props;
+
   return (
-    <div>
-      <h1>1.3 PERANTI BANTU PENGEMBANG SISTEM</h1>
+    <div style={style}>
+      <h2 className="font-bold">1.3 PERANTI BANTU PENGEMBANG SISTEM</h2>
       <div className="row">
         <p className="paragraph font-sans">
           Salah satu kriteria yang harus dimiliki oleh sebuah perangkat lunak
@@ -22,8 +23,10 @@ export default function Bab13(props) {
           sementara selera dan kebasaan pengguna sangat beragam. Selain itu,
           antar muka juga harus mempunyai kinerja yang ketat untu meyakinkan
           bahwa tidak terjadi keterlambatan antara tindakan pengguna dengan
-          tanggapan sistem. oleh karena itu, pengembangan Antarmuka biasanya di
-          lakukan dengan membuat purwarupa terlebih dahulu, dan baru kemudian di
+          tanggapan sistem.
+          <br />
+          <br /> Oleh karena itu, pengembangan Antarmuka biasanya di lakukan
+          dengan membuat purwarupa terlebih dahulu, dan baru kemudian di
           kembangkan sesuai dengan kebutuhan pengguna secara umum. Untuk
           mempercepat proses perancangan dan pengembangan antarmuka, perancang
           sering memanfaatkan peranti bantu pengembang sistem untarmuka. Sekitar
@@ -40,37 +43,51 @@ export default function Bab13(props) {
           sejumlah peranti masukan, seperti tetikus, sudah merupakan peranti
           masukan standar seperti halnya papan ketik, sehingga saat ini kita
           tidak direpotkan lagi dengan berbagai usaha yang diperlukan untuk
-          menangani berbagai peranti masukan. Penggunaan peranti bantu untuk
-          mengembangkan antarmuka mempunyai keuntungan antara lain: 1. Antarmuka
-          yang dihasilkan menjadi lebih baik: a. Hasil rancangan sementara
-          segera dapat dibuatkan purwarupanya atau diimplementasikan secara
-          penuh, bahkan sebelum aplikasinya ditulis. b. Perubahan yang
-          diinginkan pengguna dapat segera dilakukan karena antarmukanya mudah
-          dimodifikasi. c. Sebuah aplikasi dapat mempunyai lebih dari sebuah
-          Antarmuka. d. Sejumlah aplikasi yang berbeda dapat mempunyai antarmuka
-          yang konsisten, karena mereka dibangun dengan menggunakan peranti
-          bantu yang sama. e. Memberikan "wajah” yang unik dan sentuhan khusus
-          kepada program aplikasi yang akan dibangun. f. Memungkinkan sejumlah
-          ahli bekerja bersama untuk memberikan kontribusinya masing-masing,
-          misalnya ahli grafis, psikolog, ahli kognitif, maupun spesialis human
-          factor. 2. Program antarmuka menjadi mudah ditulis dan lebih ekonomis
-          untuk dipelihara: a. Program antarmuka menjadi lebih terstruktur dan
-          lebih modular karena sudah dipisahkan dari aplikasinya. Hal ini
-          memungkinkan pengguna untuk mengubah antarmuka tanpa mempengaruhi
-          aplikasinya, dan memungkinkan pemrogram untuk mengubah program
-          aplikasi tanpa mengubah antarmukanya. b. Program antarmuka lebih
-          bersifat dapat-digunakan-kembali (reusable) karena peranti bantu
-          menggabungkan bagian-bagian yang sama. c. Kehandalan antarmuka menjadi
-          lebih tinggi, karena program iłu dibangkitkan secara otomatis dari
-          tingkat spesifikasi yang lebih tinggi. d. Spesifikasi antarmuka
-          menjadi lebih mudah diungkapkan, divalidasi, dievaluasi, dan
-          dimodifikasi. e. Ketergantungan peranti diisolasi di dałam peranti
-          bantu sehingga antarmukanya lebih mudah di-port ke berbagai aplikasi
-          pada lingkungan yang berbeda.
+          menangani berbagai peranti masukan. <br />
+          <br />
+          Penggunaan peranti bantu untuk mengembangkan antarmuka mempunyai
+          keuntungan antara lain: <br />
+          1. Antarmuka yang dihasilkan menjadi lebih baik: <br />
+          <div className="ml-4 paragraph font-sans">
+            a. Hasil rancangan sementara segera dapat dibuatkan purwarupanya
+            atau diimplementasikan secara penuh, bahkan sebelum aplikasinya
+            ditulis. <br />
+            b. Perubahan yang diinginkan pengguna dapat segera dilakukan karena
+            antarmukanya mudah dimodifikasi. <br />
+            c. Sebuah aplikasi dapat mempunyai lebih dari sebuah Antarmuka.{" "}
+            <br />
+            d. Sejumlah aplikasi yang berbeda dapat mempunyai antarmuka yang
+            konsisten, karena mereka dibangun dengan menggunakan peranti bantu
+            yang sama. <br />
+            e. Memberikan "wajah” yang unik dan sentuhan khusus kepada program
+            aplikasi yang akan dibangun. <br />
+            f. Memungkinkan sejumlah ahli bekerja bersama untuk memberikan
+            kontribusinya masing-masing, misalnya ahli grafis, psikolog, ahli
+            kognitif, maupun spesialis human factor.
+          </div>
+          <br />
+          <br />
+          2. Program antarmuka menjadi mudah ditulis dan lebih ekonomis untuk
+          dipelihara: <br />
+          <div className="ml-4 paragraph font-sans">
+            a. Program antarmuka menjadi lebih terstruktur dan lebih modular
+            karena sudah dipisahkan dari aplikasinya. Hal ini memungkinkan
+            pengguna untuk mengubah antarmuka tanpa mempengaruhi aplikasinya,
+            dan memungkinkan pemrogram untuk mengubah program aplikasi tanpa
+            mengubah antarmukanya.
+            <br />
+            b. Program antarmuka lebih bersifat dapat-digunakan-kembali
+            (reusable) karena peranti bantu menggabungkan bagian-bagian yang
+            sama. <br />
+            c. Kehandalan antarmuka menjadi lebih tinggi, karena program iłu
+            dibangkitkan secara otomatis dari tingkat spesifikasi yang lebih
+            tinggi. <br />
+            d. Spesifikasi antarmuka menjadi lebih mudah diungkapkan,
+            divalidasi, dievaluasi, dan dimodifikasi. e. Ketergantungan peranti
+            diisolasi di dałam peranti bantu sehingga antarmukanya lebih mudah
+            di-port ke berbagai aplikasi pada lingkungan yang berbeda.
+          </div>
         </p>
-        {readFull === false && (
-          <img className="imgSize" src={require("../../assets/BAB1.png")} />
-        )}
       </div>
     </div>
   );

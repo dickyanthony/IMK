@@ -1,17 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./button.css";
+export function SubmitButton(props) {
+  const {
+    title = "Submit",
+    className,
+    containerStyle,
+    sizeStyle,
+    width = "33.5px",
+    height = "33.5px",
+    ...restProps
+  } = props;
+  return (
+    <button
+      style={containerStyle}
+      className={"nav_btn"}
+      type={"submit"}
+      {...restProps}
+    >
+      {title}
+      {/* <a
+        className="nav_btn"
+        style={{ width: width, height: height }}
+        href={to}
+        {...restProps}
+      >
+        {title}
+      </a> */}
+    </button>
+  );
+}
 export function PrimaryButton(props) {
   const {
     to = "#",
     title = "Primary Button",
     className,
     containerStyle,
+    sizeStyle,
+    width = "33.5px",
+    height = "33.5px",
     ...restProps
   } = props;
   return (
     <div style={containerStyle} className={className}>
-      <a className="nav_btn" href={to} {...restProps}>
+      <a
+        className="nav_btn"
+        style={{ width: width, height: height }}
+        href={to}
+        {...restProps}
+      >
         {title}
       </a>
     </div>

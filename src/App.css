@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:wght@500&display=swap");
-
 * {
   font-family: "Poppins", sans-serif;
   margin: 0px;
@@ -11,4 +10,38 @@
 
 *::selection {
   primary: var(--black);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-4px);
+  }
+  20% {
+    transform: translateX(4px);
+  }
+  30% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-shake {
+    animation: shake 0.5s;
+  }
 }

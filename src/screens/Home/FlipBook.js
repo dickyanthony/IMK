@@ -15,12 +15,14 @@ export default function FlipBook() {
   );
 
   const mBottom =
-    windowDimensions.width < 841 && windowDimensions.width >= 659
+    windowDimensions.width < 841 && windowDimensions.width >= 679
       ? "80px"
-      : windowDimensions.width < 659 && windowDimensions.width >= 643
+      : windowDimensions.width < 679 && windowDimensions.width >= 653
       ? "120px"
-      : windowDimensions.width < 643 && windowDimensions.width >= 606
-      ? "150px"
+      : windowDimensions.width < 653 && windowDimensions.width >= 637
+      ? "200px"
+      : windowDimensions.width < 637 && windowDimensions.width >= 605
+      ? "260px"
       : "50px";
 
   useEffect(() => {
@@ -57,23 +59,41 @@ export default function FlipBook() {
       </div>
     );
   };
-
-  const ButtonCombo = () => {
+  const FAEyeStarSmall = () => {
     return (
-      <div
-        className="row"
-        style={{
-          width: "100%",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="w-full">
+        <div
+          className="row"
+          style={{
+            textAlign: "center",
+            alignItems: "center",
+            marginTop: "20px",
+            marginBottom: "-10px",
+          }}
+        >
+          <FontAwesomeIcon size="sm" icon={faEye} />
+          <div className="rate">50</div>
+          <FontAwesomeIcon
+            size="sm"
+            style={{ marginLeft: "15px" }}
+            icon={faStar}
+          />
+          <div className="rate">5</div>
+        </div>
+      </div>
+    );
+  };
+
+  const ButtonCombo2 = () => {
+    return (
+      <div className="flex w-full justify-between">
         <ButtonLink
           to={"Bab1"}
-          className="buttonContainer"
-          classLink="buttonStart"
+          className="w-10/12"
+          classLink="w-full text-center"
           title="BACA"
         />
-        <PrimaryButton className="primaryButtonContainer" title="+" />
+        <PrimaryButton className="p2Btn" title="+" />
       </div>
     );
   };
@@ -84,17 +104,19 @@ export default function FlipBook() {
       setIsReadMore(!isReadMore);
     };
     return (
-      <p className="text">
-        {isReadMore ? text.slice(0, 150) : text}
-        <span onClick={toggleReadMore} className="read-or-hide">
-          {isReadMore ? "...read more" : " show less"}
-        </span>
-      </p>
+      <div className={`w-full`}>
+        <p className="text">
+          {isReadMore ? text.slice(0, 150) : text}
+          <span onClick={toggleReadMore} className="read-or-hide">
+            {isReadMore ? "...read more" : " show less"}
+          </span>
+        </p>
+      </div>
     );
   };
   const BabComp = () => {
     return book.map((item) => {
-      return <ItemBook item={item} />;
+      return <ItemBook windowWidth={windowDimensions.width} item={item} />;
     });
   };
   return (
@@ -103,26 +125,48 @@ export default function FlipBook() {
         className={"flip-card"}
         style={{ marginBottom: !isReadMore ? mBottom : "" }}
       >
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
+        <div className="flip-card-inner w-full flex justify-center">
+          <div
+            className="flip-card-front "
+            style={{
+              width: windowDimensions.width > 366 ? "300px" : "200px",
+              height: windowDimensions.width > 366 ? "400px" : "300px",
+            }}
+          >
             <img
               src={require("../../assets/imkF.jpg")}
               alt="Avatar"
-              style={{ width: "300px", height: "400px" }}
+              style={{
+                width: windowDimensions.width > 366 ? "300px" : "200px",
+                height: windowDimensions.width > 366 ? "400px" : "300px",
+              }}
             />
           </div>
-          <div className="flip-card-back">
+          <div
+            className="flip-card-back w-full"
+            style={{
+              width: windowDimensions.width > 366 ? "300px" : "200px",
+              height: windowDimensions.width > 366 ? "400px" : "300px",
+            }}
+          >
             <img
               src={require("../../assets/imkB.jpg")}
               alt="Avatar"
-              style={{ width: "300px", height: "400px" }}
+              style={{
+                width: windowDimensions.width > 366 ? "300px" : "200px",
+                height: windowDimensions.width > 366 ? "400px" : "300px",
+              }}
             />
           </div>
         </div>
-        <div className="desc-container">
+        <div
+          className={`desc-container  ${
+            windowDimensions.width > 436 ? "w-full" : "w-10/12 "
+          }`}
+        >
           <RenderTitle />
           <FAEyeStar />
-          <ButtonCombo />
+          <ButtonCombo2 />
           <ReadMore
             desc="Buku ini membahas aspek-aspek penting yang dipelajari dalam Interaksi Manusia dan Komputer antara lain adalah aspek manusia, aspek komputer, dan aspek lingkungan kerja atau yang lebih dikenal dengan sebutan ergonomik. Dalam buku ini Anda diajak untuk memahami ketiga aspek di atas terutama dalam kaitannya dengan pembuatan antarmuka program aplikasi dan pencapaian kondisi lingkungan kerja yang nyaman.
           Berbeda dengan edisi sebelumnya yang membagi keseluruhan isi buku menjadi dua bagian besar, yaitu diskusi tentang ketiga aspek di atas dan teknik pemrograman untuk membuat tampilan antarmuka program aplikasi. Buku ini hanya mengupas tiga aspek di atas, tetapi dengan kupasan yang lebih mendalam."

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./imk.css";
 import Bab1 from "./Bab1";
 import Bab11 from "./Bab11";
@@ -8,6 +8,7 @@ import Bab14 from "./Bab14";
 import { PressButton } from "../../components/Button";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { getWindowDimensions } from "../../constant";
 function BabFirst() {
   const bab1Options = [
     "Bab 1",
@@ -17,15 +18,38 @@ function BabFirst() {
     "1.4 STRATEGI PENGEMBANGAN ANTARMUKA",
   ];
   const [readFull, setReadFull] = useState(false);
-
   const [defaultOption, setDefaultOption] = useState(bab1Options[0]);
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const ReadAll = () => {
     return (
       <>
-        <Bab1 />
-        <Bab11 />
-        <Bab12 />
-        <Bab13 />
+        <Bab1
+          windowWidth={windowDimensions.width}
+          style={{ marginBottom: "30px" }}
+        />
+        <Bab11
+          windowWidth={windowDimensions.width}
+          style={{ marginBottom: "30px" }}
+        />
+        <Bab13
+          windowWidth={windowDimensions.width}
+          style={{ marginBottom: "30px" }}
+        />
+        <Bab13
+          windowWidth={windowDimensions.width}
+          style={{ marginBottom: "30px" }}
+        />
         <Bab14 />
       </>
     );
@@ -33,19 +57,19 @@ function BabFirst() {
 
   const ReadOne = () => {
     if (defaultOption === bab1Options[0]) {
-      return <Bab1 readFull={readFull} />;
+      return <Bab1 windowWidth={windowDimensions.width} readFull={readFull} />;
     } else if (defaultOption === bab1Options[1]) {
-      return <Bab11 readFull={readFull} />;
+      return <Bab11 windowWidth={windowDimensions.width} readFull={readFull} />;
     } else if (defaultOption === bab1Options[2]) {
-      return <Bab12 readFull={readFull} />;
+      return <Bab12 windowWidth={windowDimensions.width} readFull={readFull} />;
     } else if (defaultOption === bab1Options[3]) {
-      return <Bab13 readFull={readFull} />;
+      return <Bab13 windowWidth={windowDimensions.width} readFull={readFull} />;
     } else if (defaultOption === bab1Options[4]) {
-      return <Bab14 readFull={readFull} />;
+      return <Bab14 windowWidth={windowDimensions.width} readFull={readFull} />;
     }
   };
   return (
-    <div className="containerBab">
+    <div className="flex flex-wrap flex-col w-full justify-center content-center m-0 ">
       <div
         className="headerContainer"
         style={{ justifyContent: readFull ? "flex-end" : "space-between" }}
@@ -67,7 +91,7 @@ function BabFirst() {
         />
       </div>
 
-      <div className="contentContainer">
+      <div className="contentContainer bg-slate-100 p-5 rounded-md">
         {readFull ? <ReadAll /> : <ReadOne />}
       </div>
     </div>
