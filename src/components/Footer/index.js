@@ -6,9 +6,6 @@ function Footer() {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
-  const buttonSize = windowDimensions.width > 320 ? "50px" : "30px";
-  const smallLogoSize = windowDimensions.width > 320 ? 10 : 6;
-  const smallTitleSize = windowDimensions.width > 320 ? "2xl" : "lg";
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
