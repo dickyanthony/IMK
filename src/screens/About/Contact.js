@@ -68,5 +68,5 @@ export default function Contact(props) {
       </form>
     );
   };
-  return windowDimensions.width > 332 ? <RenderBig /> : <RenderSm />;
+  return windowDimensions.width > 332 ? RenderBig() : RenderSm();
 }

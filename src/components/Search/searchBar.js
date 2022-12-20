@@ -43,7 +43,6 @@ export default function SearchBar() {
       navigate(link.onClick);
       tes.current.clear();
       tes.current?.blur();
-      console.log("tes==>", tes);
     }
   }
 

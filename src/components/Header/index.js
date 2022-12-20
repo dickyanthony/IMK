@@ -1,12 +1,12 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { getWindowDimensions } from "../../constant";
-import logo from "../../assets/logo-header.png";
-import respLogo from "../../assets/respLogo.png";
 import { NavLink } from "react-router-dom";
 import { Menu, Transition } from "@headlessui/react";
-import "./header.css";
-import SearchBar from "../Search/searchBar";
 import { book } from "../../constant";
+import SearchBar from "../Search/searchBar";
+import logo from "../../assets/logo-header.png";
+import respLogo from "../../assets/respLogo.png";
+import "./header.css";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -15,11 +15,7 @@ function Header() {
     getWindowDimensions()
   );
   const buttonSize = windowDimensions.width > 320 ? "50px" : "30px";
-  const smallLogoSize = windowDimensions.width > 320 ? 10 : 6;
   const smallTitleSize = windowDimensions.width > 320 ? "2xl" : "lg";
-  const mLeftTitle = windowDimensions.width > 278 ? 20 : 10;
-  const mRightTitle = windowDimensions.width > 278 ? 20 : 10;
-  const paddingTitle = windowDimensions.width > 334 ? "p-4" : "p-0";
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -28,77 +24,6 @@ function Header() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const RenderBigHead = () => {
-    return (
-      <div className="secondary_container">
-        <img className="w-10 h-10 ml-10" src={respLogo} alt={logo} />
-        <h1 className="text-2xl font-bold text-[#000000] ">IMK</h1>
-        <div className="navprod_link">
-          <div>
-            <NavLink
-              to={"/"}
-              className={({ isActive }) =>
-                isActive ? "navprod_text_active" : "navprod_text"
-              }
-            >
-              Home
-            </NavLink>
-          </div>
-
-          <div>
-            <NavLink
-              to="/About"
-              className={({ isActive }) =>
-                isActive ? "navprod_text_active" : "navprod_text"
-              }
-            >
-              About
-            </NavLink>
-          </div>
-        </div>
-        <SearchBar placeholder="Cari" data={book} />
-      </div>
-    );
-  };
-  const RenderMediumHead = () => {
-    return (
-      <div
-        className="w-full h-20 flex justify-between items-center px-8 text-white"
-        style={{ boxShadow: "0px 5px 40px rgba(0, 0, 0, 0.15)" }}
-      >
-        <img className="w-10 h-10 ml-10" src={respLogo} alt={logo} />
-
-        <div className="navprod_link flex justify-center">
-          <div>
-            <NavLink
-              to={"/"}
-              // className={({ isActive }) =>
-              //   isActive ? "asdsd" : "navprod_text"
-              // }
-              className={({ isActive }) =>
-                isActive ? "navprod_text_active" : "navprod_text"
-              }
-            >
-              Home
-            </NavLink>
-          </div>
-
-          <div>
-            <NavLink
-              to="/About"
-              className={({ isActive }) =>
-                isActive ? "navprod_text_active" : "navprod_text"
-              }
-            >
-              About
-            </NavLink>
-          </div>
-        </div>
-        <SearchBar placeholder="Cari" data={book} />
-      </div>
-    );
-  };
 
   const RenderSmallHead = () => {
     return (
@@ -195,10 +120,70 @@ function Header() {
     <>
       {windowDimensions.width >= 885 ? (
         <div className="navbar_products flex w-full justify-center">
-          <RenderBigHead />
+          <div
+            className="w-full h-20 flex justify-between items-center px-8 text-white"
+            style={{ boxShadow: "0px 5px 40px rgba(0, 0, 0, 0.15)" }}
+          >
+            <img className="w-10 h-10 ml-10" src={respLogo} alt={logo} />
+
+            <div className="navprod_link flex justify-center">
+              <div>
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive ? "navprod_text_active" : "navprod_text"
+                  }
+                >
+                  Home
+                </NavLink>
+              </div>
+
+              <div>
+                <NavLink
+                  to="/About"
+                  className={({ isActive }) =>
+                    isActive ? "navprod_text_active" : "navprod_text"
+                  }
+                >
+                  About
+                </NavLink>
+              </div>
+            </div>
+            <SearchBar placeholder="Cari" data={book} />
+          </div>
         </div>
       ) : windowDimensions.width >= 662 ? (
-        <RenderMediumHead />
+        <div
+          className="w-full h-20 flex justify-between items-center px-8 text-white"
+          style={{ boxShadow: "0px 5px 40px rgba(0, 0, 0, 0.15)" }}
+        >
+          <img className="w-10 h-10 ml-10" src={respLogo} alt={logo} />
+
+          <div className="navprod_link flex justify-center">
+            <div>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "navprod_text_active" : "navprod_text"
+                }
+              >
+                Home
+              </NavLink>
+            </div>
+
+            <div>
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  isActive ? "navprod_text_active" : "navprod_text"
+                }
+              >
+                About
+              </NavLink>
+            </div>
+          </div>
+          <SearchBar placeholder="Cari" data={book} />
+        </div>
       ) : (
         <RenderSmallHead />
       )}

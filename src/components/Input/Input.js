@@ -1,5 +1,4 @@
-import React, { forwardRef, useState } from "react";
-// import './input.css'
+import React, { forwardRef } from "react";
 const Inputs = forwardRef((props, ref) => {
   const {
     labelText = "input",
